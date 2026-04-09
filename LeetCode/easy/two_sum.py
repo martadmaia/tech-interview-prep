@@ -112,10 +112,48 @@ def two_sum_4(nums, target):
         possible_index_2 = dict_nums.get(remainder)
         if possible_index_2 and possible_index_2 != index:
             return [index, possible_index_2]
+        
+#5ª Solução, melhor em runtime, mas a memória é horrível
+#Runtime bate 57.21%
+#Memory bate 59.38%
+def two_sum_5(nums, target):
+    """
+    :type nums: List[int]
+    :type target: int
+    :rtype: List[int]
+    """
+
+    nums_indexes = {}
+
+    for index in range(len(nums)):
+
+        current_num = nums[index]
+
+        remainder = target - current_num
+
+        if nums_indexes.get(remainder) is not None: #Cuidado aqui, não posso fazer só o get, pq pode-me retornar um índice 0, e o Python avalia-o como falso e não entra no if
+            return [nums_indexes.get(remainder), index]
+        else:
+            nums_indexes[current_num] = index
+
+    return [0, 0]
 
 
+def two_sum_6(nums, target):
+    """
+    :type nums: List[int]
+    :type target: int
+    :rtype: List[int]
+    """
+    for index in range(1,len(nums)):
+        for second_index in range(1, len(nums)):
+            if nums[second_index] + nums[second_index - index] == target:
+                return [second_index, second_index-index]
+    
+    return [0,0]
 
-print(two_sum_4([3,2,4], 6))
+
+print(two_sum_6([3, 2, 3], 6))
             
 
             
