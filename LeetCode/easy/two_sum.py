@@ -1,6 +1,6 @@
 #### Description ###
 
-#Até agora: 50 minutos
+#Até agora: 80 minutos
 
 #Given an array of integers nums and an integer target, 
 #return indices of the two numbers such that they add up to target.
@@ -113,7 +113,6 @@ def two_sum_4(nums, target):
         if possible_index_2 and possible_index_2 != index:
             return [index, possible_index_2]
         
-#5ª Solução, melhor em runtime, mas a memória é horrível
 #Runtime bate 57.21%
 #Memory bate 59.38%
 def two_sum_5(nums, target):
@@ -138,7 +137,9 @@ def two_sum_5(nums, target):
 
     return [0, 0]
 
-
+#6ª Solução, melhor em runtime, mas a memória é horrível
+#Runtime bate 100%
+#Memory bate 23.34%
 def two_sum_6(nums, target):
     """
     :type nums: List[int]
@@ -153,7 +154,20 @@ def two_sum_6(nums, target):
     return [0,0]
 
 
-print(two_sum_6([3, 2, 3], 6))
+
+#Complexidade da quinta solução
+#Primeiro Loop corre aproximadamente n vezes (de 0 a n - 1). Complexidade O(n)
+#Para memória, O(n), porque o dicionário pode crescer até n elementos no pior cenário.
+
+
+#Complexidade da sexta solução
+#Primeiro Loop corre aproximadamente n vezes (de 1 a n - 1). Complexidade O(n)
+#Segundo Loop a mesma coisa (de index a n - 1). Complexidade O(n)
+#Nested loops. O(n**n)
+#Para a memória, não estou a guardar nada em memória, exceto index e second index. O(1).
+
+
+
             
 
             
