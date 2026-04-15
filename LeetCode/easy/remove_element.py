@@ -1,5 +1,7 @@
 #### Description ####
 
+#Até agora: 40 minutos
+
 # Given an integer array nums and an integer val, remove all 
 # occurrences of val in nums in-place. The order of the elements 
 # may be changed. Then return the number of elements in nums which 
@@ -15,7 +17,7 @@
 #Primeira solução
 #Runtime bate 100.00%
 #Memory bate 66.42%
-def removeElement(nums, val):
+def remove_element(nums, val):
         """
         :type nums: List[int]
         :type val: int
@@ -30,7 +32,7 @@ def removeElement(nums, val):
 
 
 
-def removeElement2(nums, val):
+def remove_element2(nums, val):
         """
         :type nums: List[int]
         :type val: int
@@ -51,7 +53,7 @@ val = 3
 print("Before calling")
 print(nums)
 print(id(nums))
-k = removeElement2(nums, val)
+k = remove_element2(nums, val)
 print("after calling")
 print(nums)
 
@@ -66,6 +68,7 @@ print(id(nums))
 
 #In the second solution we are virtually assigning a new object to nums. id(nums) changes. The pointer changes, and the outside, global variable, remains unchanged.
 
+#https://stackoverflow.com/questions/22054698/modifying-a-list-inside-a-function
 
 
 
