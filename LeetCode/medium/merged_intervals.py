@@ -51,3 +51,7 @@ def merge(intervals):
 intervals = [[1,3],[2,6],[8,10],[15,18]]
 
 print(merge(intervals))    
+
+#Improvements
+#Changing in place, for memory optimisation
+#Edge case, array only has one interval. Return automatically.
