@@ -1,3 +1,6 @@
+#Sliding window
+#Two Pointers
+
 # Given a string s, find the length of the longest substring without duplicate characters.
 
 #Need to keep track of chars already present
