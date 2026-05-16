@@ -78,5 +78,8 @@ def checkSubarraySum2(nums, k):
             return True
 
     return False
+
+#For returning the indexes I would need to return
+#[remainder_map[remainder] + 1, index] ?
         
         
