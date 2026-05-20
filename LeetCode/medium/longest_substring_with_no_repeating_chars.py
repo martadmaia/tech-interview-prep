@@ -53,11 +53,10 @@ def lengthOfLongestSubstring2(s):
 
     for right in range(len(s)):
         while s[right] in unique_chars:
-            unique_chars.remove(s[right])
+            unique_chars.remove(s[left])
             left += 1
 
         unique_chars.add(s[right])
-        result = max(result, right - left + 1)
+        result = max(result, len(unique_chars))
 
     return result
-        
