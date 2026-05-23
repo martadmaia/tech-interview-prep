@@ -4,8 +4,7 @@
 
 #consecutive elements 
 #so no duplicates
-#I had the right thinking here but I needed to find a way to
-#isolate the sequences
+#I had the right thinking here, of conceptualising the consecutiveness but I needed to find a way to isolate the sequences
 
 def longestConsecutive(nums):
     result = set()
