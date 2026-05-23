@@ -166,7 +166,34 @@ def two_sum_6(nums, target):
 #Nested loops. O(n**n)
 #Para a memória, não estou a guardar nada em memória, exceto index e second index. O(1).
 
+#Two Pointer Inward Traversal
+#Inward Traversal
+#Coming back to the problem
+#Studying with Coding Interview Patterns book
+#Array is sorted in ascending order
+#What does that tell us?
+#If I have two numbers and the sum falls short of my target I'll need to move my left pointer (increase my sum)
+#If I have two numbers and the sum is over my target, I'll need to move my right pointer (decrease my sum)
+#Using two pointers i don't need to keep track of indices or an auxiliary data structure, I can just return the pointers as soon as I find a solution
+#If no pair is found, return an empty array
+def twoSum7(nums, target):
+    left, right = 0, len(nums) - 1
 
+    while left < right:
+        sum = nums[left] + nums[right]
+        if sum < target:
+            left += 1
+        elif sum > target:
+            right -= 1
+        else:
+            return [left, right]
+
+    return []
+
+print(twoSum7([3, 2, 4], 6))
+    
+    
+    
 
             
 
